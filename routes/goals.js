@@ -7,3 +7,9 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
+
+app.get('/goals', function(req, res) {
+  res.render('goals/index', {
+    goals: goalDb.getAll()
+  });
+});
