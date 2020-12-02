@@ -5,15 +5,8 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>Alexa's Goals</h1>
-    <ul>
-      <% goals.forEach(function(g) { %>
-        <li>
-          <%= g.goal %>
-            - 
-          <%= g.done ? 'done' : 'not done' %>
-        </li>
-      <% }); %>
-    </ul>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <a href="/goals">Goals</a>
   </body>
 </html>

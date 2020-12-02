@@ -1,15 +1,13 @@
 var express = require('express');
 var router = express.Router();
+const goalsCtrl = require('../controllers/goals')
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/', goalsCtrl.index)
+router.get('/new', goalsCtrl.new)
+router.get('/:id', goalsCtrl.show)
+router.post('/', goalsCtrl.create)
+router.delete('/:id', goalsCtrl.delete)
+router.get('/:id/edit', goalsCtrl.edit)
+router.put('/:id', goalsCtrl.update)
 
 module.exports = router;
-
-app.get('/goals', function(req, res) {
-  res.render('goals/index', {
-    goals: goalDb.getAll()
-  });
-});
