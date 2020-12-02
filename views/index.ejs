@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Alexa's Goals</h1>
+    <ul>
+      <% goals.forEach(function(g) { %>
+        <li>
+          <%= g.goal %>
+            - 
+          <%= g.done ? 'done' : 'not done' %>
+        </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
