@@ -28,7 +28,7 @@ function create(req, res) {
   res.redirect('/goals')
 }
 
-function deleteTodo(req, res) {
+function deleteGoal(req, res) {
   Goal.deleteOne(req.params.id)
   res.redirect('/goals')
 }
@@ -38,6 +38,6 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-  Todo.update(req.params.id, req.body)
-  res.redirect(`/goalss/${req.params.id}`)
+  Goal.update(req.params.id, req.body)
+  res.redirect(`/goals/${req.params.id}`)
 }

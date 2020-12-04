@@ -27,12 +27,12 @@ const goals = [
   }
   
   function deleteOne(id) {
-    const idx = goal.findIndex(goal => goal.id === parseInt(id))
+    const idx = goals.findIndex(goal => goal.id === parseInt(id))
     goals.splice(idx, 1)
   }
   
   function update(id, newGoal){
     const idx = goals.findIndex(goal => goal.id === parseInt(id))
-    goals[idx].todo = newGoal.goal
+    goals[idx].goal = newGoal.goal
     goals[idx].done = newGoal.done === 'on' ? true : false
   }
